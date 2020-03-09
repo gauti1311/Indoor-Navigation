@@ -42,7 +42,7 @@ def main():
             corners = [(position[2],height1-position[3]),(position[0],height1-position[1]),(position[4],height1-position[5]),(position[6],height1-position[7])]  # location of four corners    
             for i in xrange(len(corners)):
                 cv2.circle(img,(int(corners[i][0]),int(all_corners[i][1])),2,(250,0,250),2)  
-            ## 3D ppints with length l
+            ## 3D points with length l
             img_points = []
             img_points.append(corners)
             obj_points = [(0,0,0),(0,l,0),(l,l,0),(l,0,0)]
