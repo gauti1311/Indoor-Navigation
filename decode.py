@@ -17,6 +17,13 @@ def callback(data):
     new_img = 'True'
     msg = data
     
+def _draw_axis(img, ctr, imgpts):   
+    ctr = (int(ctr[0]),int(ctr[1]))                                                
+    img = cv2.line(img,ctr, tuple(imgpts[0].ravel()), (0,0,255), 4)
+    img = cv2.line(img,ctr, tuple(imgpts[1].ravel()), (0,255,0), 4)
+    img = cv2.line(img,ctr, tuple(imgpts[2].ravel()), (255,0,0), 4)
+    return img 
+
 def main():
     global msg
     global new_img
